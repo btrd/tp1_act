@@ -10,6 +10,7 @@ public class ComparaisonRefs {
 		FonctionsReference fr = new FonctionsReference(sizes);
 		
 		// Création des résultats
+<<<<<<< HEAD
 		double[][] results = new double[7][];
 		results[0] = fr.puissance(1);
 		results[1] = fr.logarithme();
@@ -21,6 +22,14 @@ public class ComparaisonRefs {
 		
 		// Écriture du fichier de résultats
 		EcritureFichier.output("data/comparaisons_refs.txt", results, sizes);
+=======
+		double[][] results = new double[2][];
+		results[0] = fr.puissance(1);
+		results[1] = fr.logarithme();
+		
+		// Écriture du fichier de résultats
+		EcritureFichier.output("../data/comparaisons_refs.txt", results, sizes);
+>>>>>>> 8b9304214104b971ad46020b51c742681351767e
 	}
 	
 }

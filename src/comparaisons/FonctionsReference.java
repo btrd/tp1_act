@@ -133,6 +133,5 @@ public class FonctionsReference {
 		
 		return values;
 	}
-	
-	
+
 }
