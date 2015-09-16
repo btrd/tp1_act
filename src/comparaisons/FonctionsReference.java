@@ -74,6 +74,42 @@ public class FonctionsReference {
 	 * @param pow puissance
 	 * @return tableau des résultats
 	 */
+	public int factorielle (int terme) {
+		int count = 0;
+		int total = 1;
+		
+		for (count = terme; count > 0; count--) {
+			total *= count;
+			if (total < 0) {
+				total = Integer.MAX_VALUE;
+				break;
+			}
+		}
+		
+		return total;
+	}
+	
+	/**
+	 * Retourne le tableau de toutes les valeurs de n^pow pour tous
+	 * les n présents dans this.sizes.
+	 * @param pow puissance
+	 * @return tableau des résultats
+	 */
+	public double[] getFactorielle () {
+		double[] values = new double[this.sizes.length];
+		
+		for (int idx=0 ; idx<this.sizes.length ; idx++)
+			values[idx] = factorielle(this.sizes[idx]);
+		
+		return values;
+	}
+	
+	/**
+	 * Retourne le tableau de toutes les valeurs de n^pow pour tous
+	 * les n présents dans this.sizes.
+	 * @param pow puissance
+	 * @return tableau des résultats
+	 */
 	public double[] powN (int k) {
 		double[] values = new double[this.sizes.length];
 		
@@ -89,12 +125,14 @@ public class FonctionsReference {
 	 * @param pow puissance
 	 * @return tableau des résultats
 	 */
-	public int factorielle (int terme) {
-		if (terme == 0) {
-			return 1;
-		} else {
-			return terme * factorielle(terme - 1);
-		}
+	public double[] nPowN () {
+		double[] values = new double[this.sizes.length];
+		
+		for (int idx=0 ; idx<this.sizes.length ; idx++)
+			values[idx] = Math.pow(this.sizes[idx], this.sizes[idx]);
+		
+		return values;
 	}
+	
 	
 }

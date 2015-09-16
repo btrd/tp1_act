@@ -10,11 +10,14 @@ public class ComparaisonRefs {
 		FonctionsReference fr = new FonctionsReference(sizes);
 		
 		// Création des résultats
-		double[][] results = new double[4][];
+		double[][] results = new double[7][];
 		results[0] = fr.puissance(1);
 		results[1] = fr.logarithme();
 		results[2] = fr.nLogarithme();
 		results[3] = fr.exp();
+		results[4] = fr.getFactorielle();
+		results[5] = fr.powN(5);
+		results[6] = fr.nPowN();
 		
 		// Écriture du fichier de résultats
 		EcritureFichier.output("data/comparaisons_refs.txt", results, sizes);
