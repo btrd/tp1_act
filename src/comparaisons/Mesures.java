@@ -13,9 +13,51 @@ public class Mesures {
 	public static long mesureAlea (DataStructure aMesurer) {
 		// TODO : Compléter la fonction afin de pouvoir renvoyer une valeur.
 		
+		long before = System.nanoTime();
+		long after;
 		aMesurer.alea();
+		after = System.nanoTime();
 		
-		return 0;
+		return after - before;
 	}
 	
+	public static long mesureMinimumSimple (DataStructure aMesurer) {
+		
+		long before = System.nanoTime();
+		long after;
+		aMesurer.minimumSimple();
+		after = System.nanoTime();
+		
+		return after - before;
+	}
+	
+	public static long mesureMinimumTri (DataStructure aMesurer) {
+		
+		long before = System.nanoTime();
+		long after;
+		aMesurer.minimumTri();
+		after = System.nanoTime();
+		
+		return after - before;
+	}
+	
+	public static long mesureMystere (DataStructure aMesurer) {
+	
+		long before = System.nanoTime();
+		long after;
+		aMesurer.mystere();
+		after = System.nanoTime();
+		
+		return after - before;
+	}
+	
+	public static long mesureRecherche (DataStructure aMesurer) {
+		
+		long before = System.nanoTime();
+		long after;
+		aMesurer.recherche(5);
+		after = System.nanoTime();
+		
+		return after - before;
+	}
 }

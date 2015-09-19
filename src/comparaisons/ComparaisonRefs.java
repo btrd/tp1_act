@@ -10,8 +10,7 @@ public class ComparaisonRefs {
 		FonctionsReference fr = new FonctionsReference(sizes);
 		
 		// Création des résultats
-<<<<<<< HEAD
-		double[][] results = new double[7][];
+		double[][] results = new double[12][];
 		results[0] = fr.puissance(1);
 		results[1] = fr.logarithme();
 		results[2] = fr.nLogarithme();
@@ -19,17 +18,13 @@ public class ComparaisonRefs {
 		results[4] = fr.getFactorielle();
 		results[5] = fr.powN(5);
 		results[6] = fr.nPowN();
-		
+		results[7] = fr.logarithmeEpsilon(1);
+		results[8] = fr.logarithmeEpsilon(0.5);
+		results[9] = fr.logarithmeEpsilon(0.2);
+		results[10] = fr.logarithmeEpsilon(0.1);
+		results[11] = fr.nPowDivised(2);
 		// Écriture du fichier de résultats
 		EcritureFichier.output("data/comparaisons_refs.txt", results, sizes);
-=======
-		double[][] results = new double[2][];
-		results[0] = fr.puissance(1);
-		results[1] = fr.logarithme();
-		
-		// Écriture du fichier de résultats
-		EcritureFichier.output("../data/comparaisons_refs.txt", results, sizes);
->>>>>>> 8b9304214104b971ad46020b51c742681351767e
 	}
 	
 }

@@ -44,6 +44,21 @@ public class FonctionsReference {
 	 * @param pow puissance
 	 * @return tableau des résultats
 	 */
+	public double[] logarithmeEpsilon (double epsilon) {
+		double[] values = new double[this.sizes.length];
+		
+		for (int idx=0 ; idx<this.sizes.length ; idx++)
+			values[idx] = Math.log(this.sizes[idx]) / Math.pow(this.sizes[idx], epsilon);
+		
+		return values;
+	}
+	
+	/**
+	 * Retourne le tableau de toutes les valeurs de n^pow pour tous
+	 * les n présents dans this.sizes.
+	 * @param pow puissance
+	 * @return tableau des résultats
+	 */
 	public double[] nLogarithme () {
 		double[] values = new double[this.sizes.length];
 		
@@ -130,6 +145,15 @@ public class FonctionsReference {
 		
 		for (int idx=0 ; idx<this.sizes.length ; idx++)
 			values[idx] = Math.pow(this.sizes[idx], this.sizes[idx]);
+		
+		return values;
+	}
+	
+	public double[] nPowDivised (double k) {
+		double[] values = new double[this.sizes.length];
+		
+		for (int idx=0 ; idx<this.sizes.length ; idx++)
+			values[idx] = Math.pow(this.sizes[idx], k) / Math.pow(2, this.sizes[idx]);
 		
 		return values;
 	}
