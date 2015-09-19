@@ -3,6 +3,9 @@ package comparaisons;
 import datastructures.DataStructure;
 
 public class Mesures {
+	
+	// POUR JEAN : ICI TU DEVRAS APPELER DANS LE MAIN DE COMPARAISON STRUCTURE CHACUNE DES FONCTIONS CI DESSOUS POUR LES COMPARER
+	// EXERCICE 2.3.2 :)
 
 	/**
 	 * Permet de renvoyer la mesure de la complexité pour l'exécution de
